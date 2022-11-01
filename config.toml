@@ -1,4 +1,4 @@
-baseURL = 'https://icarus.project/'
+baseURL = 'https://icarus-website.netlify.app/'
 title = 'Icarus Project'
 
 defaultContentLanguage = "en"
