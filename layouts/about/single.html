@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a class="screen-reader-text" href="#content">Skip to content</a>
+
+    {{ partial "header.html" . }}
+
+    <main id="content" class="content py-5">
+        <div class="container-fluid background-logo py-5">
+            <div class="container">
+                <div id="about" class="row justify-content-start">
+                    <h2>{{ partial "fontawesome.html" "solid/book-bookmark" }} History</h2>
+                    <div class="col-lg-4 col-12 mb-xl-4 mb-0">
+                        <p>Icarus Project is a technical research laporatory dedicated for testing, analyzing, documenting, and developing Internet censorship circumvention solutions. Our aim is at collceting as many techniques as possible and document them in forms of technical analysis, and step-by-step implementation guides.</p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4 col-12 mb-4">
+                        <p>Check out our contribution guidelines to know how can you contribute your own ideas and methods. Icarus Project is a technical research laporatory dedicated for testing, analyzing, documenting, and developing Internet censorship circumvention solutions.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+
+                    <h2>{{ partial "fontawesome.html" "solid/toolbox" }} Methodology</h2>
+                    <div class="col-lg-4 col-12">
+                        <p>Icarus Project is a technical research laporatory dedicated for testing, analyzing, documenting, and developing Internet censorship circumvention solutions. Our aim is at collceting as many techniques as possible and document them in forms of technical analysis, and step-by-step implementation guides.</p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4 col-12">
+                        <p>Check out our contribution guidelines to know how can you contribute your own ideas and methods. Icarus Project is a technical research laporatory dedicated for testing, analyzing, documenting, and developing Internet censorship circumvention solutions.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {{ partial "cta.html" . }}
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+</body>
+
+</html>

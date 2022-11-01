@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a class="screen-reader-text" href="#content">Skip to content</a>
+
+    {{ partial "header.html" . }}
+
+    <main id="content" class="content pt-5">
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div id="community" class="row justify-content-between">
+                    <div class="col-lg-5 col-12 mb-4">
+                        <h2>Outreach</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper eu turpis amet fames
+                            ornare. Luctus eget facilisis et tortor cras blandit amet egestas. Bibendum lobortis
+                            dignissim nisl ut ipsum ultrices at. Sit ornare tellus porttitor quam. Viverra pretium lacus
+                            est tempus at netus mi luctus. Consequat orci habitant aliquam tortor massa pellentesque
+                            aliquet.</p>
+                        <p>Vel sodales elit nunc nunc tellus aliquet sapien. Nec sodales dictum consectetur pulvinar
+                            augue diam aenean elementum malesuada.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+                    <div class="col-lg-5 col-12 mb-4">
+                        <h2>Localization</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper eu turpis amet fames
+                            ornare. Luctus eget facilisis et tortor cras blandit amet egestas. Bibendum lobortis
+                            dignissim nisl ut ipsum ultrices at. Sit ornare tellus porttitor quam. Viverra pretium lacus
+                            est tempus at netus mi luctus. Consequat orci habitant aliquam tortor massa pellentesque
+                            aliquet.</p>
+                        <p>Vel sodales elit nunc nunc tellus aliquet sapien. Nec sodales dictum consectetur pulvinar
+                            augue diam aenean elementum malesuada.</p>
+                        <a href="#">Link here {{ partial "fontawesome.html" "solid/arrow-right" }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid py-5 background-gray-50">
+            <div class="container">
+                <div id="connect" class="row justify-content-between">
+                    <div class="col-lg-5 col-12 mb-4">
+                        <h2>Learn and Connect</h2>
+                        <p class="mb-5">Using or want to use Icarus Project? You can engage with us on following channels as well:</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "solid/message-dots" }} Matrix Channel</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "brands/Twitter" }} Twitter</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "brands/mastodon" }} Mastodon</a>
+                    </div>
+                    <div class="col-lg-5 col-12 mb-4">
+                        <h2>Develop and Contribute</h2>
+                        <p class="mb-5">If you want to get more involved by contributing to Icarus Project, join us here:</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "brands/github" }} GitHub</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "solid/envelope" }} Email</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html" "solid/key" }} GPG Key</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+</body>
+
+</html>

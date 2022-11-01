@@ -1,0 +1,69 @@
+{{ define "main" }}
+<main>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <section id="features" class="row justify-content-between align-items-center mt-3 mb-5">
+                {{ range where .Site.RegularPages "Section" "features" }}
+                <div class="col-xl-4 col-12 mb-xl-0 mb-4">
+                    {{ $icon := .Page.Params.icon }}
+                    <div class="feature-icon">{{ partial "fontawesome.html" $icon }}</div>
+                    <h2 class="color-gray-900">{{ .Page.Params.title }}</h2>
+                    <p class="color-gray-600">{{ .Page.Params.description }}</p>
+                </div>
+                {{ end }}
+            </section>
+        </div>
+    </div>
+    <div class="container-fluid background-gray-50 pt-3 pb-5">
+        <div class="container">
+            <section id="code">
+                <div class="row justify-content-center align-items-center py-5">
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-center custom-text">Check out our Code</h2>
+                        <p class="text-center color-gray-500">Our repository gives you access to the tools you need to
+                            build
+                            a
+                            mirror
+                            site in situations where your site is blocked from local access. It's censorship-fighting
+                            code.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-between mb-4">
+                    {{ range where .Site.RegularPages "Section" "code" }}
+                    <div class="col-lg-4 col-12 mb-xl-0 mb-4">
+                        <div class="card h-100">
+                            <img class="img-fluid card-img-top" src="/img/code/{{ .Page.Params.image }}" alt="{{ .Page.Params.title }}">
+                            <div class="card-body">
+                                <span>{{ .Page.Params.type | humanize }}</span>
+                                <h3 class="card-title">{{ .Page.Params.title }}</h3>
+                                <p class="card-text">{{ .Page.Params.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- <div class="container-fluid py-5">
+        <div class="container">
+            <section id="faq" class="row justify-content-center align-items-center py-5">
+                <img class="mb-3" src="img/icon-color.svg" style="width: 75px !important;">
+                <h2 class="text-center custom-text mb-5">Frequently Asked Questions</h2>
+                <div class="col-xl-10 col-12">
+                    {{ range .Site.Data.faq }}
+                    <details>
+                        <summary>{{ .question }} {{ partial "fontawesome.html" "solid/chevron-down" }}</summary>
+                        <p>{{ .answer | markdownify }}</p>
+                    </details>
+                    {{ end }}
+                </div>
+            </section>
+        </div>
+    </div> -->
+
+    {{ partial "cta.html" }}
+
+</main>
+{{ end }}
