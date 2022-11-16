@@ -33,7 +33,7 @@
                     {{ range where .Site.RegularPages "Section" "code" }}
                     <div class="col-lg-4 col-12 mb-xl-0 mb-4">
                         <div class="card h-100">
-                            <img class="img-fluid card-img-top" src="/img/code/{{ .Page.Params.image }}" alt="{{ .Page.Params.title }}">
+                            <img {{ with .Page.Params.animate }}id="{{ . }}" onclick="changeImage();"{{ end }} class="img-fluid card-img-top" src="/img/code/{{ .Page.Params.image }}" alt="{{ .Page.Params.title }}">
                             <div class="card-body">
                                 <span>{{ .Page.Params.type | humanize }}</span>
                                 <h3 class="card-title">{{ .Page.Params.title }}</h3>
@@ -41,6 +41,23 @@
                             </div>
                         </div>
                     </div>
+                    {{ if .Page.Params.animate }}
+                    <script>
+                        let counter = 0;
+                        function changeImage() {
+                            counter++;
+                            console.log(counter);
+                            if (counter === 5) {
+                                document.getElementById("wink").src = "/img/code/{{ .Page.Params.animation }}";
+                                counter = 0;
+                            } 
+                            else {
+                                document.getElementById("wink").src = "/img/code/{{ .Page.Params.image }}";
+                            }
+                        };
+                    </script>
+                    {{ else }}
+                    {{ end }}
                     {{ end }}
                 </div>
             </section>
