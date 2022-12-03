@@ -65,15 +65,30 @@
     </div>
     <!-- <div class="container-fluid py-5">
         <div class="container">
-            <section id="faq" class="row justify-content-center align-items-center py-5">
-                <img class="mb-3" src="img/icon-color.svg" style="width: 75px !important;">
-                <h2 class="text-center custom-text mb-5">Frequently Asked Questions</h2>
-                <div class="col-xl-10 col-12">
-                    {{ range .Site.Data.faq }}
-                    <details>
-                        <summary>{{ .question }} {{ partial "fontawesome.html" "solid/chevron-down" }}</summary>
-                        <p>{{ .answer | markdownify }}</p>
-                    </details>
+            <section id="blog">
+                <h2 class="mb-2">Our Newsroom</h2>
+                <p class="text-muted mb-5">Stay up to date with our investigations and our community.</p>
+
+                <hr />
+
+                <div class="row align-items-center py-5">
+                    {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4 mb-lg-0">
+                        <article>
+                            <p class="mb-2">{{ .Page.Params.Categories }}</p>
+                            <h4>{{ .Title }}</h4>
+                            <p class="text-muted mb-3">{{ .Description }}</p>
+                            <div class="row justify-content-start">
+                                <div class="col-2">
+                                    <img src="{{ .Site.BaseURL }}/img/authors/paul.png">
+                                </div>
+                                <div class="col-9">
+                                    <p class="mb-0">{{ .Page.Params.authors }}</p>
+                                    <p class="text-muted mb-0"><time datetime="{{ .Date.Format .Site.Params.dateform }}">{{ .Date.Format .Site.Params.dateform }}</time> · {{ .Page.ReadingTime }} min read</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                     {{ end }}
                 </div>
             </section>

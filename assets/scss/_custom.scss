@@ -258,6 +258,15 @@ nav .nav-link {
   }
 }
 
+// Newsroom
+#blog {
+  & h2 {
+    color: $blue-600;
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+}
+
 // CTA
 .cta {
   & h2 {
