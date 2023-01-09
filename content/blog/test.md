@@ -3,8 +3,8 @@ title = "Blog Post Title here"
 description = "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu."
 authors = ["admin"]
 date = "2022-11-30 08:00:00 +0200"
-image = "/blog/test.webp"
-categories = ["Article"]
+image = "/img/code/default.jpg"
+categories = ["article"]
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia tortor in justo egestas pellentesque. Pellentesque facilisis felis id nunc ultrices, sed consectetur tortor pulvinar. Praesent ornare faucibus nulla, vitae facilisis lectus vulputate sed. Aliquam semper in purus eu laoreet. Integer interdum ipsum eu malesuada mattis. Etiam sagittis lectus urna, ut cursus odio tempus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer scelerisque convallis tortor ut blandit. Nunc ligula nulla, faucibus in nisl ut, interdum porta elit. Curabitur lorem mauris, tristique ac luctus ut, eleifend nec arcu. Nulla euismod pellentesque orci, et varius odio varius eget. Aenean ac eleifend tellus. Suspendisse non porttitor neque.

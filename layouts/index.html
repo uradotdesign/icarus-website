@@ -63,7 +63,9 @@
             </section>
         </div>
     </div>
-    <!-- <div class="container-fluid py-5">
+    {{ $number := (where .Site.RegularPages "Section" "==" "blog") }}
+    {{ if gt (len $number) 3 }}
+    <div class="container-fluid py-5">
         <div class="container">
             <section id="blog">
                 <h2 class="mb-2">Our Newsroom</h2>
@@ -71,19 +73,27 @@
 
                 <hr />
 
-                <div class="row align-items-center py-5">
+                <div class="row align-items-center py-4">
                     {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-4 mb-lg-0">
                         <article>
-                            <p class="mb-2">{{ .Page.Params.Categories }}</p>
-                            <h4>{{ .Title }}</h4>
+                            {{ range .Params.categories }}
+                            <p class="category mb-2 {{ . }}">{{ . }}</p>
+                            {{ end }}
+                            <a href="{{ .Permalink }}"><h4 class="mt-2">{{ .Title }}</h4></a>
                             <p class="text-muted mb-3">{{ .Description }}</p>
                             <div class="row justify-content-start">
+                                {{ range .Param "authors" }}
+                                {{ $name := . }}
+                                {{ $path := printf "/%s/%s" "authors" ($name | urlize) }}
+                                {{ with $.Site.GetPage $path }}
                                 <div class="col-2">
-                                    <img src="{{ .Site.BaseURL }}/img/authors/paul.png">
+                                    <img src="{{ .Site.BaseURL }}/img/authors/{{ .Params.image }}">
                                 </div>
                                 <div class="col-9">
-                                    <p class="mb-0">{{ .Page.Params.authors }}</p>
+                                    <p class="mb-0">{{ .Params.name }}</p>
+                                    {{ end }}
+                                    {{ end }}
                                     <p class="text-muted mb-0"><time datetime="{{ .Date.Format .Site.Params.dateform }}">{{ .Date.Format .Site.Params.dateform }}</time> · {{ .Page.ReadingTime }} min read</p>
                                 </div>
                             </div>
@@ -93,7 +103,9 @@
                 </div>
             </section>
         </div>
-    </div> -->
+    </div>
+    {{ else }}
+    {{ end }}
 
     {{ partial "cta.html" }}
 

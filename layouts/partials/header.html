@@ -21,6 +21,16 @@
     
 </header>
 
+{{ else if (eq .Page.Type "blog") }}
+
+<header class="background-head">
+
+    {{ if len .Site.Menus }}
+    {{ partial "menu.html" . }}
+    {{ end }}
+
+</header>
+
 {{ else }}
 
 <header class="background-head">
@@ -43,5 +53,8 @@
         </div>
     </div>
 </div>
+
+
+
 
 {{ end }}

@@ -151,6 +151,64 @@ nav .nav-link {
   display: none;
 }
 
+// Posts
+article {
+  a {
+    text-decoration: none;
+    color: $gray-800;
+  }
+
+  & .category {
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+
+    &.article {
+      color: #3730a3;
+      background-color: #e0e7ff;
+    }
+
+    &.video {
+      color: #991b1b;
+      background-color: #fee2e2;
+    }
+
+    &.study {
+      color: #065f46;
+      background-color: #d1fae5;
+    }
+  }
+}
+
+article.card {
+  padding: 1.5rem;
+  background-color: #e8f3ff;
+  border: none;
+  border-radius: 0;
+  height: 100%;
+
+  & img {
+    max-height: 20rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  & .info {
+    font-size: 0.875rem;
+    color: $blue-700;
+  }
+  
+  & .title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $blue-700;
+    text-decoration: none;
+    line-height: 1.1;
+  }
+}
+
 // Home
 .home {
   & h1 {
@@ -333,9 +391,9 @@ nav .nav-link {
 }
 
 // About
-#about  {
+#about {
   & h2 {
-  margin-left: -3rem;
+    margin-left: -3rem;
     & .inline-svg {
       margin-right: 0.5rem;
       color: $blue-600;
@@ -362,7 +420,7 @@ nav .nav-link {
   }
 }
 
-// Community 
+// Community
 #community {
   & p {
     color: $gray-600;
@@ -388,7 +446,7 @@ nav .nav-link {
   & p {
     color: $gray-600;
   }
-  
+
   & a {
     display: flex;
     align-items: center;

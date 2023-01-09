@@ -110,11 +110,11 @@ paginate = 8
     name       = "Community"
     url        = "/community/"
     weight     = "4"
-#  [[languages.en.menu.main]]
-#    identifier = "blog"
-#    name       = "Blog"
-#    url        = "/blog/"
-#    weight     = "5"
+  [[languages.en.menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/blog/"
+    weight     = "5"
   [[languages.en.menu.footer]]
     identifier = "community"
     name       = "Community"
