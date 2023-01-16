@@ -1,7 +1,7 @@
 +++
 title = "Blog Post Title here"
 description = "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu."
-authors = ["admin"]
+authors = ["icarus"]
 date = "2022-11-30 08:00:00 +0200"
 image = "/img/code/default.jpg"
 categories = ["article"]
