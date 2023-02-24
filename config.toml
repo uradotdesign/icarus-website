@@ -1,4 +1,4 @@
-baseURL = 'https://icarus-website.netlify.app/'
+baseURL = '/'
 title = 'Icarus Project'
 
 defaultContentLanguage = "en"
@@ -74,12 +74,12 @@ paginate = 8
 
   # Social icons
   [[params.social]]
-    name = "facebook"
-    url  = "https://www.facebook.com/"
+    name = "mastodon"
+    url  = "https://mastodon.online/web/accounts/41742"
 
   [[params.social]]
     name = "twitter"
-    url  = "https://twitter.com/"
+    url  = "https://twitter.com/IcarusProject0"
 
   [[params.social]]
     name = "github"
@@ -103,7 +103,7 @@ paginate = 8
   [[languages.en.menu.main]]
     identifier = "documentation"
     name       = "Documentation"
-    url        = "https://docs.icarus.project"
+    url        = "/docs/"
     weight     = "3"
   [[languages.en.menu.main]]
     identifier = "community"
