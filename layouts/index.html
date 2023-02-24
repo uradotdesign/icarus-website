@@ -64,12 +64,12 @@
         </div>
     </div>
     {{ $number := (where .Site.RegularPages "Section" "==" "blog") }}
-    {{ if gt (len $number) 3 }}
+    {{ if gt (len $number) 0 }}
     <div class="container-fluid py-5">
         <div class="container">
             <section id="blog">
-                <h2 class="mb-2">Our Newsroom</h2>
-                <p class="text-muted mb-5">Stay up to date with our investigations and our community.</p>
+                <h2 class="mb-2">Our News</h2>
+                <p class="text-muted mb-5">Stay up to date with our publications and our community.</p>
 
                 <hr />
 
