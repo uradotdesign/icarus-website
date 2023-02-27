@@ -2,7 +2,7 @@
 <div class="row py-4">
     {{ range .Pages }}
     <a class="mb-0" href="{{ .Permalink }}">{{ .Title }}</a>
-    <p>{{ .Description }}</p>
+    <p>{{ .Description | markdownify }}</p>
     {{ end }}
 </div>
 {{ end }}
