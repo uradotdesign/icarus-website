@@ -390,6 +390,14 @@ article.card {
   }
 }
 
+// Content
+
+main {
+  & img {
+    max-width: 100%;
+  }
+}
+
 // About
 #about {
   & h2 {

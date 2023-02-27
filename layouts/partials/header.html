@@ -21,7 +21,7 @@
     
 </header>
 
-{{ else if (eq .Page.Type "blog") }}
+{{ else if or (eq .Page.Type "blog") (eq .Page.Type "docs") }}
 
 <header class="background-head">
 
@@ -53,8 +53,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 {{ end }}
