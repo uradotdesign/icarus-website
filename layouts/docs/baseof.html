@@ -21,6 +21,7 @@
                     <main class="col-12 col-md-8 col-xl-9" role="main">
                         {{ partial "breadcrumb.html" . }}
                         {{ partial "reading-time.html" . }}
+                        <h1>{{ .Title }}</h1>
                         {{ .Content }}
                         <hr>
                         {{ block "main" . }}{{ end }}
