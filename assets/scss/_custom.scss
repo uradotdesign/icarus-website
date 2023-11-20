@@ -278,6 +278,64 @@ article.card {
   font-size: 1.125rem;
 }
 
+// Breadcrumbs
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, ">");
+}
+
+// Table of Contents
+#TableOfContents {
+  & ul {
+    list-style-type: none;
+    padding-left: 1rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    & a {
+      display: block;
+      text-decoration: none;
+      margin-block: 0.25rem;
+      padding-left: 1rem;
+
+      &.active {
+        font-weight: 600;
+        border-left: 2px solid $blue-600;
+        padding-left: calc(1rem - 2px);
+      }
+    }
+  }
+}
+
+// Metadata
+#metadata {
+  a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+
+    & span.inline-svg {
+      margin-right: .25rem;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: $blue-600;
+
+    &:hover {
+      color: $blue-800;
+    }
+
+    & span.inline-svg {
+      margin-right: .25rem;
+    }
+  }
+}
+
 // Code
 #code {
   & p {
@@ -480,6 +538,20 @@ main {
   }
 }
 
+// Alerts
+
+.alert {
+  a {
+    color: inherit;
+  }
+  blockquote {
+    margin-bottom: 0;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 // FAQ
 details summary::-webkit-details-marker {
   display: none;
@@ -638,5 +710,17 @@ svg path {
       width: 100%;
       display: block;
     }
+  }
+}
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  main {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }

@@ -59,6 +59,8 @@ paginate = 8
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   gitUrl = "https://github.com/icaruslab/icaruslab.github.io/commit/"
+  GitHubView = "https://github.com/icaruslab/icaruslab.github.io/blob/master/"
+  GitHubEdit = "https://github.com/icaruslab/icaruslab.github.io/edit/master/"
 
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"

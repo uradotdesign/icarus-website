@@ -14,11 +14,11 @@
     <div id="content" class="content py-5">
         <div class="container-fluid">
             <div class="container">
-                <div class="row">
-                    <aside class="col-12 col-md-4 col-xl-3">
+                <div class="row justify-content-center">
+                    <aside class="col-12 col-md-3 col-xl-3">
                         {{ partial "sidebar.html" . }}
                     </aside>
-                    <main class="col-12 col-md-8 col-xl-9" role="main">
+                    <main data-bs-spy="scroll" data-bs-target="#toc" class="col-12 col-md-6 col-xl-6" role="main">
                         {{ partial "breadcrumb.html" . }}
                         {{ partial "reading-time.html" . }}
                         <h1>{{ .Title }}</h1>
@@ -26,6 +26,31 @@
                         <hr>
                         {{ block "main" . }}{{ end }}
                     </main>
+                    <aside id="toc" class="col-12 col-md-3 col-xl-3">
+                        <div class="sticky-xl-top pt-3">
+                            {{ if (and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "")) }}
+                            <p><strong>Table of Contents</strong></p>
+                            {{ .TableOfContents }}
+                            <hr>
+                            {{ end }}
+                            <div id="metadata">
+                                {{ if .File.Path }}
+                                {{ $.Scratch.Set "FilePath" .File.Path }}
+                                {{ end }}
+                                {{ with .Site.Params.GitHubView }}
+                                <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>{{ partial "fontawesome.html"
+                                    "solid/eye" }}View page source</a>
+                                {{ end }}
+                                {{ with .Site.Params.GithubEdit }}
+                                <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>{{ partial "fontawesome.html"
+                                    "solid/pen-to-square" }}Edit this page</a>
+                                {{ end }}
+                                <a href="https://github.com/icaruslab/icaruslab.github.io/issues/new" target="_blank" rel="noopener noreferrer">{{ partial "fontawesome.html"
+                                    "brands/github" }}Create documentation issue</a>
+                                <button onclick="window.print();">{{ partial "fontawesome.html" "solid/print" }}Print section</button>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>
